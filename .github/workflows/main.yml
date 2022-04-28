@@ -25,6 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          # this will use the latest Node 16 version
+          node-version: 16.x
       # Runs a set of commands using the runners shell
       - name: test
         run: |
