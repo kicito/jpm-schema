@@ -366,8 +366,7 @@
         }
       },
       "additionalProperties": {
-        "type": "string",
-        "tsType": "string | undefined"
+        "type": "string"
       }
     },
     "config": {
@@ -571,13 +570,19 @@
       "properties": {
         "jolieDependency": {
           "description": "List of Jolie package dependencies, which are published in npm Repository",
+          "type": "object",
+          "minProperties": 1,
           "$ref": "#/$defs/dependency"
         },
         "mavenDependency": {
           "description": "List of Java project dependencies, which are published in Maven Central Repository",
+          "type": "object",
+          "minProperties": 1,
           "$ref": "#/$defs/dependency"
         },
         "mavenIndirectDependency": {
+          "type": "object",
+          "minProperties": 1,
           "$ref": "#/$defs/dependency"
         }
       },
@@ -607,6 +612,7 @@
     }
   ],
   "additionalProperties": false,
+  "required": ["jpm"],
   "$defs": {
     "person": {
       "description": "A person who has been involved in creating or maintaining this package.",

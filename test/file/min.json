@@ -1,0 +1,14 @@
+{
+  "name": "packagename1",
+  "version": "version",
+  "description": "",
+  "main": "app.js",
+  "author": "Joe Don",
+  "license": "ISC",
+  "dependencies": {},
+  "jpm": {
+    "mavenDependency": {
+      "mvn-art:group:version": "1.0.0"
+    }
+  }
+}
