@@ -568,19 +568,19 @@
       "description": "Jolie related package dependencies.",
       "type": "object",
       "properties": {
-        "jolieDependency": {
+        "jolieDependencies": {
           "description": "List of Jolie package dependencies, which are published in npm Repository",
           "type": "object",
           "minProperties": 1,
           "$ref": "#/$defs/dependency"
         },
-        "mavenDependency": {
+        "mavenDependencies": {
           "description": "List of Java project dependencies, which are published in Maven Central Repository",
           "type": "object",
           "minProperties": 1,
           "$ref": "#/$defs/dependency"
         },
-        "mavenIndirectDependency": {
+        "mavenIndirectDependencies": {
           "type": "object",
           "minProperties": 1,
           "$ref": "#/$defs/dependency"
