@@ -23,7 +23,7 @@ const examplePackageJsons: {
     },
   },
   {
-    name: "minimal package json with empty jolieDependency",
+    name: "minimal package json with empty jolieDependencies",
     expectedResult: false,
     args: {
       name: "packagename2",
@@ -34,12 +34,12 @@ const examplePackageJsons: {
       license: "ISC",
       dependencies: {},
       jpm: {
-        jolieDependency: {},
+        jolieDependencies: {},
       },
     },
   },
   {
-    name: "minimal valid package json with jolieDependency",
+    name: "minimal valid package json with jolieDependencies",
     expectedResult: true,
     args: {
       name: "packagename3",
@@ -50,14 +50,14 @@ const examplePackageJsons: {
       license: "ISC",
       dependencies: {},
       jpm: {
-        jolieDependency: {
+        jolieDependencies: {
           a: "1.0.0",
         },
       },
     },
   },
   {
-    name: "minimal valid package json with mavenDependency",
+    name: "minimal valid package json with mavenDependencies",
     expectedResult: true,
     args: {
       name: "packagename3",
@@ -68,14 +68,14 @@ const examplePackageJsons: {
       license: "ISC",
       dependencies: {},
       jpm: {
-        mavenDependency: {
+        mavenDependencies: {
           "mvn-art:group:version": "1.0.0",
         },
       },
     },
   },
   {
-    name: "minimal valid package json with mavenPeerDependency",
+    name: "minimal valid package json with mavenIndirectDependencies",
     expectedResult: true,
     args: {
       name: "packagename3",
@@ -86,10 +86,10 @@ const examplePackageJsons: {
       license: "ISC",
       dependencies: {},
       jpm: {
-        mavenDependency: {
+        mavenDependencies: {
           "mvn-art:group:version": "1.0.0",
         },
-        mavenIndirectDependency: {
+        mavenIndirectDependencies: {
           "mvn-peer-art:group:version": "1.0.0",
         },
       },

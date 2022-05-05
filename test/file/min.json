@@ -7,7 +7,7 @@
   "license": "ISC",
   "dependencies": {},
   "jpm": {
-    "mavenDependency": {
+    "mavenDependencies": {
       "mvn-art:group:version": "1.0.0"
     }
   }
