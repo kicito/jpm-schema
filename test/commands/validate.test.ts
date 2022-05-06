@@ -1,6 +1,6 @@
 // import { expect, test } from "@oclif/test";
 
-describe("validate", () => {
+describe('validate', () => {
   // test
   //   .stdout()
   //   .command(["validate"])
@@ -13,4 +13,4 @@ describe("validate", () => {
   //   .it("runs validate --name jeff", (ctx) => {
   //     expect(ctx.stdout).to.contain("validate jeff");
   //   });
-});
+})
