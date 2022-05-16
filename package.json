@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "build": "shx rm -rf dist && shx rm -f tsconfig.tsbuildinfo && tsc -b",
-    "lint": "eslint . --ext .ts --config .eslintrc.js --fix"
+    "lint": "eslint . --ext .ts --ext .js --config .eslintrc.js --fix"
   },
   "maintainers": [
     {

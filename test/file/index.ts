@@ -1,6 +1,5 @@
 import {readdirSync} from 'node:fs'
-import {resolve, dirname} from 'node:path'
-import {fileURLToPath} from 'node:url'
+import {resolve} from 'node:path'
 
 function readDirectory(p: string) {
   return readdirSync(p, 'utf8')
@@ -8,6 +7,7 @@ function readDirectory(p: string) {
   .map(f => resolve(p, f))
 }
 
-const testFiles = readDirectory(dirname(fileURLToPath(import.meta.url)))
+// eslint-disable-next-line unicorn/prefer-module
+const testFiles = readDirectory(__dirname)
 
 export default testFiles

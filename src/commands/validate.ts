@@ -7,7 +7,7 @@ export default class Validate extends Command {
 
   static override examples = ['$ validate .', '$ validate ./package.json']
   static override usage = [
-    'validate [pacagke_json_path]',
+    'validate [package_json_path]',
     'validate [directory]',
   ]
 
@@ -29,7 +29,7 @@ export default class Validate extends Command {
   public async run(): Promise<void> {
     const {args, flags} = await this.parse(Validate)
 
-    let path = args.path
+    let path = args['path']
 
     // checks if argument is a absolute path or not
     if (!isAbsolute(path)) {
@@ -49,7 +49,7 @@ export default class Validate extends Command {
       this.error(
         'file not exists: ' + flags.verbose ?
           'lookup path ' + path :
-          args.path,
+          args['path'],
         {exit: 1},
       )
     }
